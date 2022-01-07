@@ -44,8 +44,11 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         holder.catchPhrase.setText(userDetails.getCompany().getCatchPhrase());
         holder.bs.setText(userDetails.getCompany().getBs());
 
+    }
 
-
+    public void getAllUsers(List<UserDetails> userDetailsList)
+    {
+        this.UserDetailsList = userDetailsList;
     }
 
     @Override

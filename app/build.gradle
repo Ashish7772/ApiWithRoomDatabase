@@ -1,6 +1,4 @@
-plugins {
-    id 'com.android.application'
-}
+apply plugin: 'com.android.application'
 
 android {
     compileSdk 32
@@ -21,10 +19,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    configurations {
+        cleanedAnnotations
+        implementation.exclude group: 'org.jetbrains' , module:'annotations'
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
 }
 
 dependencies {
@@ -43,4 +46,12 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.9'
     implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.3'
     implementation 'com.pixplicity.sharp:library:1.1.0'
+
+    implementation "android.arch.lifecycle:extensions:1.1.0"
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.0"
+    testImplementation "android.arch.core:core-testing:1.1.0"
+
+
+
+
 }

@@ -1,8 +1,16 @@
 package com.example.androidproject;
 
+import androidx.room.Entity;
+
+import com.google.gson.annotations.SerializedName;
+
+//@Entity(tableName = "company")
 public class company {
+  //  @SerializedName("name")
     private String name;
+   // @SerializedName("catchPhrase")
     private String catchPhrase;
+   // @SerializedName("bs")
     private String bs;
 
     public String getName() {

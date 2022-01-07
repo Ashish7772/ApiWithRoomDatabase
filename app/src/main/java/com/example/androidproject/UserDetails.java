@@ -1,5 +1,11 @@
 package com.example.androidproject;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+import com.google.gson.annotations.SerializedName;
+
+@Entity(tableName = "UserDetails")
 public class UserDetails {
     public String getId() {
         return id;
@@ -45,19 +51,36 @@ public class UserDetails {
         this.website = website;
     }
 
-    public void setAddresses(address address) {
+    public void setAddress(address address) {
         this.address = address;
     }
 
-    public void setCompanies(company company) {
+    public int getUserid() {
+        return userid;
+    }
+
+    public void setUserid(int userid) {
+        this.userid = userid;
+    }
+
+    public void setCompany(company company) {
         this.company = company;
     }
 
+
+    @PrimaryKey(autoGenerate = true)
+    private int userid;
+    @SerializedName("id")
     private String id;
+    @SerializedName("name")
     private String name;
+    @SerializedName("username")
     private String username;
+    @SerializedName("email")
     private String email;
+    @SerializedName("phone")
     private String phone;
+    @SerializedName("website")
     private String website;
 
     public String getPhone() {
@@ -72,6 +95,23 @@ public class UserDetails {
         return company;
     }
 
+  //  @SerializedName("address")
     private address address;
+   // @SerializedName("company")
     private company company;
+
+    @Override
+    public String toString() {
+        return "UserDetails{" +
+                "userid=" + userid +
+                ", id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", website='" + website + '\'' +
+                ", address=" + address +
+                ", company=" + company +
+                '}';
+    }
 }

@@ -1,7 +1,14 @@
 package com.example.androidproject;
 
+import androidx.room.Entity;
+
+import com.google.gson.annotations.SerializedName;
+
+//@Entity(tableName = "geo")
 public class geo {
+  //  @SerializedName("lat")
     private String lat;
+  //  @SerializedName("lng")
     private String lng;
 
     public String getLat() {

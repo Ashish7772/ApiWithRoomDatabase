@@ -11,42 +11,26 @@
         android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:layout_margin="5dp"
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="500dp" />
 
 
-        <Button
-            android:id="@+id/saveData"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Save Data in Room"
-            android:textSize="20dp"
-            android:layout_below="@+id/recyclerView"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"/>
+
 
         <Button
             android:id="@+id/fetchData"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/saveData"
+            android:layout_below="@+id/recyclerView"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
             android:text="Fetch Data in Room"
             android:textSize="20dp" />
 
-        <Button
-            android:id="@+id/removeData"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/fetchData"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="20dp"
-            android:text="Remove Data in Room"
-            android:textSize="20dp" />
+
     </RelativeLayout>
 
 </ScrollView>

@@ -1,5 +1,10 @@
 package com.example.androidproject;
 
+import androidx.room.Entity;
+
+import com.google.gson.annotations.SerializedName;
+
+//@Entity(tableName = "address")
 public class address {
     public String getStreet() {
         return street;
@@ -17,9 +22,13 @@ public class address {
         return zipcode;
     }
 
+   // @SerializedName("street")
     private String street;
+   // @SerializedName("suite")
     private String suite;
+  //  @SerializedName("city")
     private String city;
+  //  @SerializedName("zipcode")
     private String zipcode;
 
     public geo getGeo() {
